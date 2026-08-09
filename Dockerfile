@@ -6,7 +6,8 @@
 
 FROM nginx:1.27-alpine
 
-COPY index.html /usr/share/nginx/html/index.html
+# Copy all static assets (index.html, logo.png, etc.) into Nginx's html folder
+COPY . /usr/share/nginx/html/
 
 EXPOSE 80
 
